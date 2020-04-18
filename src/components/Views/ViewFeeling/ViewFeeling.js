@@ -6,10 +6,24 @@ class ViewFeeling extends Component {
   state = {
     feeling: 0,
   };
+  onInputChange = () => (event) => {
+    this.setState(
+      {
+        feeling: event.target.value,
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
+  };
 
   onFeelingClick = (event) => {
     event.preventDefault();
-    console.log("You submitted your feeling");
+    this.props.dispatch({
+      type: "SET_FEELING",
+      payload: this.state,
+    });
+    this.props.history.push("/understanding");
   };
 
   render() {
@@ -22,16 +36,17 @@ class ViewFeeling extends Component {
           <div>
             <br></br>
             <form>
-              <label for="feeling">Feeling?</label>
+              <label>Feeling?</label>
               <br></br>
-              <select id="feeling" name="feeling">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-              </select>
-              <input onClick={this.onFeelingClick} type="submit" value="Next" />
+              <input
+                type="number"
+                id="feeling"
+                placeholder="1-5"
+                min="1"
+                max="5"
+                onChange={this.onInputChange()}
+              />
+              <button onClick={this.onFeelingClick}>Next</button>
             </form>
           </div>
         </body>
