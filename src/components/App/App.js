@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import "./App.css";
-// import Feeling from "../Views/Feeling";
+import ViewFeeling from "../Views/ViewFeeling.js";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
+import ViewSubmit from "../Views/ViewSubmit";
+import ViewSupport from "../Views/ViewSupport";
+import ViewUnderstanding from "../Views/ViewUnderstanding";
+import ViewComments from "../Views/ViewComments";
 
 class App extends Component {
   render() {
@@ -15,16 +19,13 @@ class App extends Component {
               <i>Don't forget it!</i>
             </h4>
           </header>
-          <body>
-            <h1>How are you feeling today?</h1>
-            <div>
-              <form>
-                <input type="text" placeholder="How are you feeling?" />
-                <button onClick={this.onNextClick}>Next</button>
-              </form>
-            </div>
-          </body>
-          <br />
+          <ViewFeeling />
+
+          <Route exact path="/" component={ViewFeeling} />
+          <Route exact path="/comments" component={ViewComments} />
+          <Route exact path="/understanding" component={ViewUnderstanding} />
+          <Route exact path="/support" component={ViewSupport} />
+          <Route exact path="/submit" component={ViewSubmit} />
         </Router>
       </div>
     );
