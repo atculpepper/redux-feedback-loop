@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import axios from "axios";
 import "./App.css";
-import ViewFeeling from "../Views/ViewFeeling.js";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
+import ViewFeeling from "../Views/ViewFeeling.js";
 import ViewSubmit from "../Views/ViewSubmit";
 import ViewSupport from "../Views/ViewSupport";
 import ViewUnderstanding from "../Views/ViewUnderstanding";
@@ -19,7 +19,6 @@ class App extends Component {
               <i>Don't forget it!</i>
             </h4>
           </header>
-          <ViewFeeling />
 
           <Route exact path="/" component={ViewFeeling} />
           <Route exact path="/comments" component={ViewComments} />

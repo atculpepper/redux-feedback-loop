@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 class ViewUnderstanding extends Component {
   state = {
@@ -22,6 +22,7 @@ class ViewUnderstanding extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+// const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(ViewUnderstanding);
+// export default connect(mapStoreToProps)(ViewUnderstanding);
+export default ViewUnderstanding;

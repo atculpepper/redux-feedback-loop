@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 class ViewFeeling extends Component {
   state = {
@@ -22,6 +22,8 @@ class ViewFeeling extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+// const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(ViewFeeling);
+// export default connect(mapStoreToProps)(ViewFeeling);
+
+export default ViewFeeling;

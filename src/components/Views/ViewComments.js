@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 class ViewComments extends Component {
   state = {
@@ -22,6 +22,6 @@ class ViewComments extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+// const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(ViewComments);
+export default ViewComments;

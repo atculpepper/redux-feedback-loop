@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 class ViewSupport extends Component {
   state = {
@@ -10,13 +10,7 @@ class ViewSupport extends Component {
     console.log(this.props.store);
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4>
-            <i>Don't forget it!</i>
-          </h4>
-        </header>
+      <div>
         <body>
           <div>
             <h1>How well do you feel supported?</h1>
@@ -28,6 +22,6 @@ class ViewSupport extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+// const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(ViewSupport);
+export default ViewSupport;
