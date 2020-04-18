@@ -13,7 +13,7 @@ class ViewSubmit extends Component {
       <div>
         <body>
           <div>
-            <h1>Thank you for submitting your feedback!</h1>
+            <h1>Review Your Feedback</h1>
           </div>
         </body>
         <br />
