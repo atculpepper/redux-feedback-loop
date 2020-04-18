@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "/Users/anneculpepper/Documents/Prime-Digital-Academy/Tier2/Week4/redux-feedback-loop-master/src/components/Views/ViewComments/ViewComments.css";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 class ViewComments extends Component {
   state = {
-    feeling: 0,
+    comment: "",
   };
 
   render() {
@@ -33,4 +33,4 @@ class ViewComments extends Component {
 
 // const mapStoreToProps = (store) => ({ store });
 
-export default ViewComments;
+export default connect()(ViewComments);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 import "/Users/anneculpepper/Documents/Prime-Digital-Academy/Tier2/Week4/redux-feedback-loop-master/src/components/Views/ViewFeeling/ViewFeeling.css";
 
 class ViewFeeling extends Component {
@@ -7,9 +7,12 @@ class ViewFeeling extends Component {
     feeling: 0,
   };
 
-  render() {
-    console.log(this.props.store);
+  onFeelingClick = (event) => {
+    event.preventDefault();
+    console.log("You submitted your feeling");
+  };
 
+  render() {
     return (
       <div>
         <body>
@@ -28,7 +31,7 @@ class ViewFeeling extends Component {
                 <option value="four">4</option>
                 <option value="five">5</option>
               </select>
-              <input type="submit" />
+              <input onClick={this.onFeelingClick} type="submit" value="Next" />
             </form>
           </div>
         </body>
@@ -40,6 +43,4 @@ class ViewFeeling extends Component {
 
 // const mapStoreToProps = (store) => ({ store });
 
-// export default connect(mapStoreToProps)(ViewFeeling);
-
-export default ViewFeeling;
+export default connect()(ViewFeeling);

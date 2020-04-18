@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "/Users/anneculpepper/Documents/Prime-Digital-Academy/Tier2/Week4/redux-feedback-loop-master/src/components/Views/ViewSupport/ViewSupport.css";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 class ViewSupport extends Component {
   state = {
-    feeling: 0,
+    support: 0,
   };
 
   render() {
@@ -38,4 +38,4 @@ class ViewSupport extends Component {
 
 // const mapStoreToProps = (store) => ({ store });
 
-export default ViewSupport;
+export default connect()(ViewSupport);

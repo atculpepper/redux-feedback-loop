@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "/Users/anneculpepper/Documents/Prime-Digital-Academy/Tier2/Week4/redux-feedback-loop-master/src/components/Views/ViewUnderstanding/ViewUnderstanding.css";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 class ViewUnderstanding extends Component {
   state = {
-    feeling: 0,
+    understanding: 0,
   };
 
   render() {
@@ -38,5 +38,4 @@ class ViewUnderstanding extends Component {
 
 // const mapStoreToProps = (store) => ({ store });
 
-// export default connect(mapStoreToProps)(ViewUnderstanding);
-export default ViewUnderstanding;
+export default connect()(ViewUnderstanding);
