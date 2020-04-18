@@ -2,11 +2,11 @@ import React, { Component } from "react";
 // import axios from "axios";
 import "./App.css";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
-import ViewFeeling from "../Views/ViewFeeling.js";
-import ViewSubmit from "../Views/ViewSubmit";
-import ViewSupport from "../Views/ViewSupport";
-import ViewUnderstanding from "../Views/ViewUnderstanding";
-import ViewComments from "../Views/ViewComments";
+import ViewFeeling from "../Views/ViewFeeling/ViewFeeling.js";
+import ViewSubmit from "../Views/ViewSubmit/ViewSubmit";
+import ViewSupport from "../Views/ViewSupport/ViewSupport";
+import ViewUnderstanding from "../Views/ViewUnderstanding/ViewUnderstanding";
+import ViewComments from "../Views/ViewComments/ViewComments";
 
 class App extends Component {
   render() {
