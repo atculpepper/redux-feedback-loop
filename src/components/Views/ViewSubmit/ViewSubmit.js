@@ -11,11 +11,9 @@ class ViewSubmit extends Component {
 
     return (
       <div>
-        <body>
-          <div>
-            <h1>Review Your Feedback</h1>
-          </div>
-        </body>
+        <div>
+          <h1>Review Your Feedback</h1>
+        </div>
         <br />
       </div>
     );

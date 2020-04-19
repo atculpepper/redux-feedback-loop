@@ -32,29 +32,27 @@ class ViewFeeling extends Component {
 
     return (
       <div>
-        <body>
-          <div>
-            <h1>How are you feeling today?</h1>
-          </div>
-          <div>
+        <div>
+          <h1>How are you feeling today?</h1>
+        </div>
+        <div>
+          <br></br>
+          <form>
+            <label>Feeling?</label>
             <br></br>
-            <form>
-              <label>Feeling?</label>
-              <br></br>
-              <input
-                type="number"
-                id="feeling"
-                placeholder="1-5"
-                min={1}
-                max={5}
-                onChange={this.onInputChange()}
-              />
-              <button disabled={!isEnabled} onClick={this.onFeelingClick}>
-                Next
-              </button>
-            </form>
-          </div>
-        </body>
+            <input
+              type="number"
+              id="feeling"
+              placeholder="1-5"
+              min={1}
+              max={5}
+              onChange={this.onInputChange()}
+            />
+            <button disabled={!isEnabled} onClick={this.onFeelingClick}>
+              Next
+            </button>
+          </form>
+        </div>
         <br />
       </div>
     );

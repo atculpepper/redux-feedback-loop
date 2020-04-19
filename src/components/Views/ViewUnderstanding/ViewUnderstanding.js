@@ -34,25 +34,23 @@ class ViewUnderstanding extends Component {
 
     return (
       <div>
-        <body>
-          <div>
-            <h1>How well are you understanding the content?</h1>
-          </div>
+        <div>
+          <h1>How well are you understanding the content?</h1>
+        </div>
 
-          <form>
-            <input
-              type="number"
-              id="understanding"
-              placeholder="1-5"
-              min={1}
-              max={5}
-              onChange={this.onInputChange()}
-            />
-            <button disabled={!isEnabled} onClick={this.onUnderstandingClick}>
-              Next
-            </button>
-          </form>
-        </body>
+        <form>
+          <input
+            type="number"
+            id="understanding"
+            placeholder="1-5"
+            min={1}
+            max={5}
+            onChange={this.onInputChange()}
+          />
+          <button disabled={!isEnabled} onClick={this.onUnderstandingClick}>
+            Next
+          </button>
+        </form>
         <br />
       </div>
     );

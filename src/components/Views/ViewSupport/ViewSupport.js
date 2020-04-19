@@ -35,27 +35,25 @@ class ViewSupport extends Component {
 
     return (
       <div>
-        <body>
-          <div>
-            <h1>How well do you feel supported?</h1>
-          </div>
+        <div>
+          <h1>How well do you feel supported?</h1>
+        </div>
 
-          <form>
-            <label for="support">Support?</label>
-            <br></br>
-            <input
-              type="number"
-              id="support"
-              placeholder="1-5"
-              min={1}
-              max={5}
-              onChange={this.onInputChange()}
-            />
-            <button disabled={!isEnabled} onClick={this.onSupportClick}>
-              Next
-            </button>
-          </form>
-        </body>
+        <form>
+          <label>Support?</label>
+          <br></br>
+          <input
+            type="number"
+            id="support"
+            placeholder="1-5"
+            min={1}
+            max={5}
+            onChange={this.onInputChange()}
+          />
+          <button disabled={!isEnabled} onClick={this.onSupportClick}>
+            Next
+          </button>
+        </form>
         <br />
       </div>
     );

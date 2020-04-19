@@ -7,7 +7,7 @@ class ViewComments extends Component {
     comment: "",
   };
 
-  onInputChange = () => (event) => {
+  onInputChange = (input) => (event) => {
     this.setState(
       {
         comment: event.target.value,
@@ -34,32 +34,31 @@ class ViewComments extends Component {
 
     return (
       <div>
-        <body>
-          <div>
-            <h1>Do you have any comments?</h1>
-          </div>
-          <form>
-            <textarea
-              id="comments"
-              name="comments"
-              cols="40"
-              rows="5"
-            ></textarea>
-            <input
-              id="submit"
-              type="submit"
-              value="Next"
-              // disabled={!isEnabled}
-              onChange={this.onInputChange()}
-              onClick={this.onCommentClick}
-            />
-          </form>
-        </body>
+        <div>
+          <h1>Do you have any comments?</h1>
+        </div>
+        <form>
+          <textarea
+            onChange={this.onInputChange()}
+            id="comments"
+            name="comments"
+            cols="40"
+            rows="5"
+          ></textarea>
+          <input
+            id="submit"
+            type="submit"
+            value="Next"
+            onClick={this.onCommentClick}
+
+            // disabled={!isEnabled}
+          />
+        </form>
       </div>
     );
   }
 }
 
-// const mapStoreToProps = (store) => ({ store });
+const mapStoreToProps = (store) => ({ store });
 
-export default connect()(ViewComments);
+export default connect(mapStoreToProps)(ViewComments);
