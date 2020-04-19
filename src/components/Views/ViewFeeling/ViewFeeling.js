@@ -6,13 +6,14 @@ class ViewFeeling extends Component {
   state = {
     feeling: 0,
   };
+
   onInputChange = () => (event) => {
     this.setState(
       {
         feeling: event.target.value,
       },
       () => {
-        console.log(...this.state.feeling);
+        console.log(this.state);
       }
     );
   };
@@ -21,7 +22,7 @@ class ViewFeeling extends Component {
     event.preventDefault();
     this.props.dispatch({
       type: "SET_FEELING",
-      payload: this.state.feeling,
+      payload: this.state,
     });
     this.props.history.push("/understanding");
   };
@@ -29,6 +30,7 @@ class ViewFeeling extends Component {
   render() {
     const { feeling } = this.state;
     const isEnabled = feeling.length > 0;
+    console.log(this.props.store);
 
     return (
       <div>
