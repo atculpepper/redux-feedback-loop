@@ -3,39 +3,38 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
 import { Provider } from "react-redux";
-import ViewFeeling from "./components/Views/ViewFeeling/ViewFeeling";
 
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import logger from "redux-logger";
 
-const feelingsReducer = (state = 0, action) => {
+const feelingsReducer = (state = {}, action) => {
   if (action.type === "SET_FEELING") {
     console.log(action.payload);
-    return action.payload;
+    return { ...action.payload };
   }
   return state;
 };
 
-const understandingReducer = (state = 0, action) => {
+const understandingReducer = (state = {}, action) => {
   if (action.type === "SET_UNDERSTANDING") {
     console.log(action.payload);
-    return action.payload;
+    return { ...action.payload };
   }
   return state;
 };
 
-const supportReducer = (state = 0, action) => {
+const supportReducer = (state = {}, action) => {
   if (action.type === "SET_SUPPORT") {
     console.log(action.payload);
-    return action.payload;
+    return { ...action.payload };
   }
   return state;
 };
 
-const commentReducer = (state = "", action) => {
+const commentReducer = (state = {}, action) => {
   if (action.type === "SET_COMMENT") {
     console.log(action.payload);
-    return action.payload;
+    return { ...action.payload };
   }
   return state;
 };

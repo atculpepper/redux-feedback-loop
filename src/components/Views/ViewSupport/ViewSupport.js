@@ -48,7 +48,7 @@ class ViewSupport extends Component {
             placeholder="1-5"
             min={1}
             max={5}
-            onChange={this.onInputChange()}
+            onChange={this.onInputChange("support")}
           />
           <button disabled={!isEnabled} onClick={this.onSupportClick}>
             Next

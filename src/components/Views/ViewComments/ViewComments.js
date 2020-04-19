@@ -7,14 +7,16 @@ class ViewComments extends Component {
     comment: "",
   };
 
-  onInputChange = (input) => (event) => {
+  onInputChange = () => (event) => {
     this.setState(
       {
         comment: event.target.value,
-      },
-      () => {
-        console.log(this.state);
       }
+      // () => {
+      //   this.clearComment();
+      // }
+
+      //TODO: Check and see if a clearComment function is needed
     );
   };
 
@@ -59,6 +61,6 @@ class ViewComments extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+// const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(ViewComments);
+export default connect()(ViewComments);
