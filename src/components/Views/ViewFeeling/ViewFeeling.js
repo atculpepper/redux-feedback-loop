@@ -27,6 +27,9 @@ class ViewFeeling extends Component {
   };
 
   render() {
+    const { feeling } = this.state;
+    const isEnabled = feeling.length > 0;
+
     return (
       <div>
         <body>
@@ -42,11 +45,13 @@ class ViewFeeling extends Component {
                 type="number"
                 id="feeling"
                 placeholder="1-5"
-                min="1"
-                max="5"
+                min={1}
+                max={5}
                 onChange={this.onInputChange()}
               />
-              <button onClick={this.onFeelingClick}>Next</button>
+              <button disabled={!isEnabled} onClick={this.onFeelingClick}>
+                Next
+              </button>
             </form>
           </div>
         </body>

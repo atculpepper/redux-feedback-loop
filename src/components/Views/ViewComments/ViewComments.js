@@ -7,8 +7,30 @@ class ViewComments extends Component {
     comment: "",
   };
 
+  onInputChange = () => (event) => {
+    this.setState(
+      {
+        comment: event.target.value,
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
+  };
+
+  onCommentClick = (event) => {
+    event.preventDefault();
+    this.props.dispatch({
+      type: "SET_COMMENT",
+      payload: this.state,
+    });
+    this.props.history.push("/submit");
+  };
+
   render() {
     console.log(this.props.store);
+    // const { comment } = this.state;
+    // const isEnabled = comment.length > 0;
 
     return (
       <div>
@@ -23,7 +45,14 @@ class ViewComments extends Component {
               cols="40"
               rows="5"
             ></textarea>
-            <input id="submit" type="submit" value="Next" />
+            <input
+              id="submit"
+              type="submit"
+              value="Next"
+              // disabled={!isEnabled}
+              onChange={this.onInputChange()}
+              onClick={this.onCommentClick}
+            />
           </form>
         </body>
       </div>

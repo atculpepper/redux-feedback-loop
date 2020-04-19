@@ -7,8 +7,31 @@ class ViewSupport extends Component {
     support: 0,
   };
 
+  onInputChange = () => (event) => {
+    this.setState(
+      {
+        support: event.target.value,
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
+  };
+
+  onSupportClick = (event) => {
+    event.preventDefault();
+    this.props.dispatch({
+      type: "SET_SUPPORT",
+      payload: this.state,
+    });
+    this.props.history.push("/comments");
+  };
+
   render() {
     console.log(this.props.store);
+
+    const { support } = this.state;
+    const isEnabled = support.length > 0;
 
     return (
       <div>
@@ -20,14 +43,17 @@ class ViewSupport extends Component {
           <form>
             <label for="support">Support?</label>
             <br></br>
-            <select id="support" name="support">
-              <option value="one">1</option>
-              <option value="two">2</option>
-              <option value="three">3</option>
-              <option value="four">4</option>
-              <option value="five">5</option>
-            </select>
-            <input type="submit" />
+            <input
+              type="number"
+              id="support"
+              placeholder="1-5"
+              min={1}
+              max={5}
+              onChange={this.onInputChange()}
+            />
+            <button disabled={!isEnabled} onClick={this.onSupportClick}>
+              Next
+            </button>
           </form>
         </body>
         <br />

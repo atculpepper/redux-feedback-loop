@@ -5,21 +5,38 @@ import App from "./components/App/App";
 import { Provider } from "react-redux";
 import ViewFeeling from "./components/Views/ViewFeeling/ViewFeeling";
 
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import logger from "redux-logger";
 
 const feelingsReducer = (state = 0, action) => {
+  if (action.type === "SET_FEELING") {
+    console.log(action.payload);
+    return action.payload;
+  }
   return state;
 };
 
 const understandingReducer = (state = 0, action) => {
+  if (action.type === "SET_UNDERSTANDING") {
+    console.log(action.payload);
+    return action.payload;
+  }
   return state;
 };
 
 const supportReducer = (state = 0, action) => {
+  if (action.type === "SET_SUPPORT") {
+    console.log(action.payload);
+    return action.payload;
+  }
   return state;
 };
 
 const commentReducer = (state = "", action) => {
+  if (action.type === "SET_COMMENT") {
+    console.log(action.payload);
+    return action.payload;
+  }
   return state;
 };
 
@@ -29,8 +46,8 @@ const storeInstance = createStore(
     supportReducer,
     commentReducer,
     understandingReducer,
-  })
-  //   applyMiddleware(logger)
+  }),
+  applyMiddleware(logger)
 );
 
 ReactDOM.render(
