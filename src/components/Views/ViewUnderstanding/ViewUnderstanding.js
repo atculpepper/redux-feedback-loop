@@ -49,6 +49,10 @@ class ViewUnderstanding extends Component {
           <button disabled={!isEnabled} onClick={this.onUnderstandingClick}>
             Next
           </button>
+          <br></br>
+          <em>
+            Rate your understanding from 1 - 5 to pass to the next question
+          </em>
         </form>
         <br />
       </div>

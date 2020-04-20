@@ -51,6 +51,8 @@ class ViewSupport extends Component {
           <button disabled={!isEnabled} onClick={this.onSupportClick}>
             Next
           </button>
+          <br></br>
+          <em>Rate our support from 1 - 5 to pass to the next question</em>
         </form>
         <br />
       </div>

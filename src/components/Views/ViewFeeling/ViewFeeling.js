@@ -52,6 +52,8 @@ class ViewFeeling extends Component {
             <button disabled={!isEnabled} onClick={this.onFeelingClick}>
               Next
             </button>
+            <br></br>
+            <em>Rate your feeling from 1 - 5 to pass to the next question</em>
           </form>
         </div>
         <br />
