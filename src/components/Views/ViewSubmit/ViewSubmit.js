@@ -16,12 +16,11 @@ class ViewSubmit extends Component {
     Axios.post("/submit", feedbackLoop)
       .then((response) => {
         console.log(response.data);
-        this.props.history.push("/");
+        this.props.history.push("/success");
       })
       .catch((err) => {
         console.warn(err);
       });
-    this.props.history.push("/");
   };
   render() {
     console.log(this.props.store);

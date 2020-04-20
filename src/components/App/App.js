@@ -7,6 +7,7 @@ import ViewSubmit from "../Views/ViewSubmit/ViewSubmit";
 import ViewSupport from "../Views/ViewSupport/ViewSupport";
 import ViewUnderstanding from "../Views/ViewUnderstanding/ViewUnderstanding";
 import ViewComments from "../Views/ViewComments/ViewComments";
+import ViewSuccess from "../Views/ViewSuccess/ViewSuccess";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route exact path="/understanding" component={ViewUnderstanding} />
           <Route exact path="/support" component={ViewSupport} />
           <Route exact path="/submit" component={ViewSubmit} />
+          <Route exact path="/success" component={ViewSuccess} />
         </Router>
       </div>
     );
