@@ -28,7 +28,6 @@ class ViewSupport extends Component {
   };
 
   render() {
-    console.log(this.props.store);
     const { support } = this.state;
     const isEnabled = support.length > 0;
 

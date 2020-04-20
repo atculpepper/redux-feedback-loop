@@ -30,7 +30,6 @@ class ViewUnderstanding extends Component {
   render() {
     const { understanding } = this.state;
     const isEnabled = understanding.length > 0;
-    console.log(this.props.store);
 
     return (
       <div>

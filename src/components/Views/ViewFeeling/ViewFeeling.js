@@ -30,7 +30,6 @@ class ViewFeeling extends Component {
   render() {
     const { feeling } = this.state;
     const isEnabled = feeling.length > 0;
-    console.log(this.props.store);
 
     return (
       <div>

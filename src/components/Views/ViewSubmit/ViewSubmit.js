@@ -21,6 +21,7 @@ class ViewSubmit extends Component {
       .catch((err) => {
         console.warn(err);
       });
+    this.props.history.push("/");
   };
   render() {
     console.log(this.props.store);
